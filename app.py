@@ -3,23 +3,23 @@ import streamlit as st
 # Define class schedule with added URLs for materials
 classes = {
     "Monday": [
-        {"time": "8:30 - 10:30", "subject": "Operation Research 1", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=6475"},
-        {"time": "10:30 - 12:30", "subject": "Machine Learning", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=7045"}
+        {"time": "8:30 - 10:30", "subject": "Operation Research 1", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=6475", "exam": "January 26, Time: 10:00 AM"},
+        {"time": "10:30 - 12:30", "subject": "Machine Learning", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=7045", "exam": "January 23,  Time: 2:00 PM"}
     ],
     "Tuesday": [
-        {"time": "12:30 - 14:30", "subject": "Automata", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=6403"},
-        {"time": "14:30 - 16:30", "subject": "Operation Research 1", "classroom": "De", "link": "https://stem.elearning.unipd.it/course/view.php?id=6475"},
-        {"time": "16:30 - 18:30", "subject": "Intelligent Robotics", "classroom": "Te,Ue", "link": "#"}
+        {"time": "12:30 - 14:30", "subject": "Automata", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=6403","exam":"TBD"},
+        {"time": "14:30 - 16:30", "subject": "Operation Research 1", "classroom": "De", "link": "https://stem.elearning.unipd.it/course/view.php?id=6475","exam":"January 26, Time: 10:00 AM"},
+        {"time": "16:30 - 18:30", "subject": "Intelligent Robotics", "classroom": "Te,Ue", "link": "#","exam":"TBD"}
     ],
     "Wednesday": [
-        {"time": "12:30 - 14:30", "subject": "Automata", "classroom": "Ce", "link": "https://stem.elearning.unipd.it/course/view.php?id=6403"},
-        {"time": "12:30 - 14:30", "subject": "Intelligent Robotics", "classroom": "Le", "link": "#"},
-        {"time": "14:30 - 16:30", "subject": "Operation Research 1", "classroom": "Ve", "link": "https://stem.elearning.unipd.it/course/view.php?id=6475"}
+        {"time": "12:30 - 14:30", "subject": "Automata", "classroom": "Ce", "link": "https://stem.elearning.unipd.it/course/view.php?id=6403","exam":"TBD"},
+        {"time": "12:30 - 14:30", "subject": "Intelligent Robotics", "classroom": "Le", "link": "#","exam":"TBD"},
+        {"time": "14:30 - 16:30", "subject": "Operation Research 1", "classroom": "Ve", "link": "https://stem.elearning.unipd.it/course/view.php?id=6475","exam":"January 26, Time: 10:00 AM"}
     ],
     "Friday": [
-        {"time": "10:30 - 12:30", "subject": "Machine Learning", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=7045"},
-        {"time": "12:30 - 14:30", "subject": "Automata", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=6403"},
-        {"time": "14:30 - 16:30", "subject": "Intelligent Robotics", "classroom": "De", "link": "#"}
+        {"time": "10:30 - 12:30", "subject": "Machine Learning", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=7045","exam":"January 23,  Time: 2:00 PM"},
+        {"time": "12:30 - 14:30", "subject": "Automata", "classroom": "Ae", "link": "https://stem.elearning.unipd.it/course/view.php?id=6403","exam":"TBD"},
+        {"time": "14:30 - 16:30", "subject": "Intelligent Robotics", "classroom": "De", "link": "#","exam":"TBD"}
     ]
 }
 
@@ -42,6 +42,7 @@ def display_classes(day, subject_filter=None):
             st.markdown(f"🕒 **Time**: {cls['time']}")
             st.markdown(f"🚪 **Classroom**: {cls['classroom']}")
             st.markdown(f"[🔗 Go to Materials]({cls['link']})", unsafe_allow_html=True)
+            st.markdown(f"😟⏰ **Exam Date**: {cls['exam']} ")
 
 
 
