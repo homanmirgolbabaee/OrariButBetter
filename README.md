@@ -1,2 +1,3 @@
 # OrariButBetter
-a better version of what orari unipd dose free for CE students of UNIPD. 
+a are u sick and tired of orari being a shitty useless buggy app ? 
+you can use this :)
