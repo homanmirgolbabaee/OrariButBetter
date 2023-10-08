@@ -1,6 +1,6 @@
 import streamlit as st
 import replicate
-import os
+#import os
 def generate_llama2_response(prompt_input):
     selected_model = st.sidebar.selectbox('Choose a Llama2 model', ['Llama2-13B'], key='selected_model')
     llm = 'a16z-infra/llama13b-v2-chat:df7690f1994d94e96ad9d568eac121aecf50684a0b0963b25a41cc40061269e5'
@@ -102,7 +102,7 @@ def main():
             
         if st.checkbox("Enable Chat Assistant 🤖"):
             replicate_api = st.secrets['replicate']['API_KEY']  # Corrected key reference
-            os.environ['REPLICATE_API_TOKEN'] = replicate_api  # Set API token as an environment variable
+            #os.environ['REPLICATE_API_TOKEN'] = replicate_api  # Set API token as an environment variable
             st.subheader('Assistant Chatbot 🤖')
             if "messages" not in st.session_state:
                 st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
